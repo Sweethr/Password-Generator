@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Password Generator</h1>
+            <ul>
+                <li>
+                    <div>
+                        <span id="output">Click Generate</span>
+                    </div>
+                </li>
+                <li>
+                    <span>Length: <strong id="lengthOutput">34</strong></span>
+                    <div>
+                        <span>4</span>
+                        <input style="width: 100%;" type="range" id="lengthNumber" max="64" min="4">
+                        <span>64</span>
+                    </div>
+                </li>
+                <li>
+                    <span>Settings</span>
+                    <div>
+                        <span>Characters</span>
+                        <input type="checkbox" id="p" name="harf" />
+                        <label class="slider" for="p"></label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>Numbers</span>
+                        <input type="checkbox" id="p2" name="sayı" />
+                        <label class="slider" for="p2"></label>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>Special Characters</span>
+                        <input type="checkbox" id="p3" name="ozelkarakter" />
+                        <label class="slider" for="p3"></label>
+                    </div>
+                </li>
+            </ul>
+            <button onclick="onClick()">Generate Password</button>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

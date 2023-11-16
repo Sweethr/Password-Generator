@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    outline: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #0759d4
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 280px;
+    min-height: 460px;
+    background: #120645;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.box h1 {
+    font-size: 26px;
+}
+
+.box button {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: radial-gradient(circle, rgba(117, 79, 255, 1) 0%, rgba(68, 150, 246, 1) 100%);
+    color: white;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.box ul li {
+    margin-top: 10px;
+}
+
+.box ul li>span {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.box ul li:nth-child(1) div span {
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.box ul li:nth-child(2) div {
+    column-gap: 5px;
+}
+
+.box ul li div {
+    padding: 10px;
+    background: #413d52;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#p,
+#p2,
+#p3 {
+    display: none;
+}
+
+.slider {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 32px;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+#p:checked+.slider,
+#p2:checked+.slider,
+#p3:checked+.slider {
+    background-color: #2196F3;
+}
+
+#p:checked+.slider::before,
+#p2:checked+.slider::before,
+#p3:checked+.slider::before {
+    transform: translateX(20px);
+}
